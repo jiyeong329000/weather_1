@@ -19,10 +19,10 @@ class _soraScreenState extends State<SoraScreen> {
         body:
         Column(children: [
          Padding(
-          padding: const EdgeInsets.fromLTRB(10, 100, 200, 20),
+          padding: const EdgeInsets.fromLTRB(30, 40, 30, 20),
           child: Container(
-           width: 450,
-           height: 120,
+           width: 320,
+           height: 100,
            decoration: BoxDecoration(
             border: Border.all(color: Colors.black12),
             borderRadius: BorderRadius.circular(30),
@@ -59,10 +59,10 @@ class _soraScreenState extends State<SoraScreen> {
            ),
           ),
           Padding(
-           padding: const EdgeInsets.fromLTRB(200, 20, 10, 20),
+           padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
            child: Container(
-            width: 300,
-            height: 120,
+            width: 320,
+            height: 100,
             decoration: BoxDecoration(
              border: Border.all(color: Colors.black12),
              borderRadius: BorderRadius.circular(30),
@@ -124,10 +124,10 @@ class _soraScreenState extends State<SoraScreen> {
           ),
          ),
          Padding(
-          padding: const EdgeInsets.fromLTRB(200, 20, 10, 20),
+          padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
           child: Container(
-           width: 300,
-           height: 120,
+           width: 320,
+           height: 100,
            decoration: BoxDecoration(
             border: Border.all(color: Colors.black12),
             borderRadius: BorderRadius.circular(30),
@@ -187,10 +187,10 @@ class _soraScreenState extends State<SoraScreen> {
            ),
           ),
          Padding(
-          padding: const EdgeInsets.fromLTRB(10, 20, 200, 20),
+          padding: const EdgeInsets.fromLTRB(30, 20, 30, 40),
           child: Container(
-           width: 300,
-           height: 120,
+           width: 320,
+           height: 100,
            decoration: BoxDecoration(
             border: Border.all(color: Colors.black12),
             borderRadius: BorderRadius.circular(30),

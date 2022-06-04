@@ -50,7 +50,7 @@ class Model {
       );
     } else if (fas < 17) {
       return Image.asset(
-        'fasion/9-11도.png',
+        'fasion/12-16도.png',
         color: Colors.black87,
       );
     } else if (fas < 20) {
@@ -60,7 +60,7 @@ class Model {
       );
     } else if (fas < 23) {
       return Image.asset(
-        'fasion/20~22도.png',
+        'fasion/20_22도.png',
         color: Colors.black87,
       );
     } else if (fas < 28) {
@@ -147,24 +147,52 @@ class Model {
     Widget? assistanceIcon(double ass) {
       if (ass < 10) {
         return Image.asset(
-          'assistanceimage/hotpack.jpeg',
-          width: 100.0,
-          height: 100.0,
+          'assistanceimage/hotpack.png',
+          width: 80.0,
+          height: 80.0,
         );
       } else if (ass < 20) {
         return Image.asset(
-          'assistanceimage/not.jpeg',
-          width: 100.0,
-          height: 100.0,
+          'assistanceimage/not.png',
+          width: 80.0,
+          height: 80.0,
         );
       } else if (ass < 30) {
         return Image.asset(
-          'assistanceimage/fan.jpeg',
-          width: 100.0,
-          height: 100.0,
+          'assistanceimage/fan.png',
+          width: 80.0,
+          height: 80.0,
         );
       }
     }
+
+  Widget? assistanceWrite(double ass) {
+    if (ass < 10) {
+      return Text(
+        '  핫팩  ',
+        style: TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+        ),
+      );
+    } else if (ass < 20) {
+      return Text(
+        '        ',
+        style: TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+        ),
+      );
+    } else if (ass < 30) {
+      return Text(
+        '휴대용 선풍기',
+        style: TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+        ),
+      );
+    }
+  }
 
     Widget? getAirIcon(int grade) {
       if (grade == 1) {

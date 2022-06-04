@@ -29,6 +29,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
   Widget? sooyoni;
   Widget? sooyoni2;
   Widget? yeong;
+  Widget? yeong2;
   Widget? pollution;
   Widget? quality;
   double? air;
@@ -59,6 +60,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
       sooyoni = model.FasionIcon(fas);
       sooyoni2 = model.FasionWrite(fas);
       yeong = model.assistanceIcon(ass);
+      yeong2 = model.assistanceWrite(ass);
       air = airData['list'][0]['components']['pm2_5'];
       air2 = airData['list'][0]['components']['pm10'];
       print(temp);
@@ -89,7 +91,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
           ),
           actions: [
             IconButton(
-              icon: Icon(Icons.location_searching),
+              icon: Image.asset("image/sora.png", width: 35.0, height: 35.0,),
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) {
@@ -190,7 +192,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SizedBox(
-                                height: 30.0,
+                                height: 50.0,
                               ),
                               Text(
                                 '$temp\u2103',
@@ -203,7 +205,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                 children: [
                                   icon!,
                                   SizedBox(
-                                    width: 8,
+                                    height: 8.0,
+                                    width: 8.0,
                                   ),
                                   Text(
                                     '$des',
@@ -214,6 +217,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                   ),
                                 ],
                               ),
+                              Row( //Row로 옷과 보조아이템 묶어줘서 가로로 뜨게 함 -2
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Column(
@@ -221,10 +227,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     SizedBox(
-                                      height: 40.0,
+                                      height: 30.0,
                                     ),
                                     Text(
-                                      '                  오늘의 추천 옷은',
+                                      '                       오늘의 추천 옷은',
                                       style: GoogleFonts.lato(
                                         fontSize: 15.0,
                                         fontWeight: FontWeight.bold,
@@ -244,7 +250,35 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                     )
                                   ],
                                 )
-                              )
+                              ),
+                                  Column(
+                                    children: [
+                                      SizedBox(
+                                        height: 30.0,
+                                      ),
+                                      Text(
+                                        '보조 아이템',
+                                        style: GoogleFonts.lato(
+                                            fontSize: 15.0,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white),
+                                      ),
+                                      Row(
+                                        children: [
+                                          Column(
+                                            children: [
+                                              yeong!,
+                                              SizedBox(width: 10),
+                                              yeong2!,
+                                              SizedBox(width: 10),
+                                            ],
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  )
+                                  ],
+                              ) //-2
                             ],
                           )
                          ]
